@@ -1,27 +1,18 @@
-# HelloIvy5
+## Angular 9 RC0 ivy "Hello World"
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0-rc.0.
+This shows how small a simple 'hello world' app can be with Angular 9 RC0 (modern browsers only to avoid polyfills, experimental / private "ɵrenderComponent" renderer, no zone.js).
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Bundle size (gzip compressed) for this 'hello world' example is only 7 KB, the total size of the app is 17.8 KB.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build --prod` to build the project.
 
-## Running unit tests
+## Running
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+I use [local-web-server](https://github.com/lwsjs/local-web-server) to serve the project, as it supports HTTP2 and content compression.
 
-## Running end-to-end tests
+Build the project, go to `dist/hello-ivy5`, then start the web server with `ws --http2 -z --port 9001`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+If you don't have local-web-server, you can run `ng serve --prod`
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
